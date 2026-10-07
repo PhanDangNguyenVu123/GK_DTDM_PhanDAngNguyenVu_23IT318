@@ -1,0 +1,23 @@
+<h1>📚 Quản lý Sách</h1>
+<small>Số lần truy cập (session lưu trên Atlas): {{visits}}</small>
+
+{{#if flash}}<div class="flash {{flash.type}}">{{flash.msg}}</div>{{/if}}
+
+<form method="POST" action="/books">
+  <input name="code" placeholder="Mã SP (bắt đầu {{codePrefix}})" required>
+  <input name="title" placeholder="Tên sách" required>
+  <input name="author" placeholder="Tác giả">
+  <input name="price" type="number" min="0" step="1" placeholder="Giá gốc (VNĐ)" required>
+  <button type="submit">Thêm</button>
+</form>
+
+<table>
+  <thead><tr><th>Mã</th><th>Tên sách</th><th>Tác giả</th><th>Giá gốc</th><th>VAT</th><th>Giá sau thuế</th></tr></thead>
+  <tbody>
+  {{#each books}}
+    <tr><td>{{code}}</td><td>{{title}}</td><td>{{author}}</td><td>{{money price}}</td><td>{{vatRate}}%</td><td><strong>{{money priceWithVat}}</strong></td></tr>
+  {{else}}
+    <tr><td colspan="6">Chưa có sách nào.</td></tr>
+  {{/each}}
+  </tbody>
+</table>

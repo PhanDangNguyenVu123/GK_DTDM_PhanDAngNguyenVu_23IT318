@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý Sách - {{studentId}}</title>
+  <style>
+    body{font-family:system-ui,sans-serif;max-width:900px;margin:30px auto;padding:0 16px;color:#222}
+    h1{margin-bottom:4px} table{width:100%;border-collapse:collapse;margin-top:16px}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left} th{background:#f3f4f6}
+    form{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:8px;margin-top:12px}
+    input{padding:8px;border:1px solid #ccc;border-radius:6px} button{padding:8px 16px;border:0;background:#2563eb;color:#fff;border-radius:6px;cursor:pointer}
+    .flash{padding:10px;border-radius:6px;margin-top:12px}.ok{background:#dcfce7}.error{background:#fee2e2}
+    footer{margin-top:40px;padding-top:12px;border-top:1px solid #ddd;color:#555;font-size:14px}
+  </style>
+</head>
+<body>
+  {{{body}}}
+  <footer>
+    Sinh viên: <strong>{{studentName}}</strong> &middot; MSSV: <strong>{{studentId}}</strong> &middot;
+    VAT áp dụng: <strong>{{vatRate}}%</strong>
+  </footer>
+</body>
+</html>
